@@ -1,0 +1,37 @@
+.page {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+}
+.sidebar {
+    width: 20%;
+    float: left;
+    border: 1px solid #aaa;
+    padding: 0px 10px 20px 10px;
+}
+.main-body {
+    width: 75%;
+    float: right;
+    border: 1px solid #aaa;
+    padding: 0px 10px 20px 20px;
+}
+textarea {
+    width: 100%;
+    height: auto;
+}
+.section-title {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #aaa;
+    text-align: left;
+    padding: 5px;
+}
+
+td,th {
+    border: 1px solid #aaa;
+    padding: 5px;
+}

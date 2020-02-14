@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Forecaste</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <!-- <script type="text/javascript" src="Test.js"></script> -->
+        <!--  <script type="text/javascript" src="Historic.js"></script> -->
+        <script type="text/javascript" src="CryptoFunctions.js"></script>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+    </head>
+    <body>
+
+        <div class = 'page'>
+            <div class = 'sidebar'>
+                <p>
+                    <h2>Investments:</h2>
+                    <textarea id='investments'>[BTC,USD,4],[ETH,USD,10]</textarea>
+                </p>
+                <input type='submit' value='Update' onclick="updatePortfolio()">
+
+                <h2>Forecast</h2>
+                <p>
+                    <span class='section-title'>Crypto:</span><br >
+                    <input type='text' name='crypto_symbol' id='crypto_symbol' value='BTC'>
+                </p>
+                <p>
+                    <span class='section-title'>Currency:</span><br >
+                    <input type='text' name='currency' id='currency' value='USD'>
+                </p>
+                <p>
+                    <span class='section-title'>SMA - Days to forecast:</span><br >
+                    <input type='text' name='num_days_to_forecast' id='num_days_to_forecast' value='15'>
+                </p>
+                <p>
+                    <span class='section-title'>SMA - Days of historic data to consider:</span><br >
+                    <input type='text' name='num_days_for_SMA' id='num_days_for_SMA' value='30'>
+                </p>
+                <input type='submit' value='Update' onclick="updateForecast()">
+            </div>
+            <div class = 'main-body'>
+                <h2>Portfolio</h2>
+                <div id="portfolio"></div>
+
+                <h2>Graph</h2>
+                <div style="width: 97%; height: auto;"><canvas id="forecast-chart"></canvas></div>
+            </div>
+        </div>
+        <script>
+            (function(){
+                initialise();
+                updateForecast();
+            })();
+        </script>
+        
+    </body>
+</html>
+        
